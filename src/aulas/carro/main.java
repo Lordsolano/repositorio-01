@@ -1,0 +1,20 @@
+package aulas.carro;
+
+public class main
+{
+    public static void main(String[] args)
+    {
+        Carro fusca = new Carro("fusca","volkswagen","verde",1997);
+        fusca.ligar();
+        fusca.acelerar("forte");
+
+        System.out.println(fusca.getAceleracao());
+        System.out.println(fusca.getLigado());
+        System.out.println(fusca.getCor());
+
+        fusca.setCor("marrom");
+
+        System.out.println(fusca.getCor());
+        System.out.println(fusca.getIdade());
+    }
+}

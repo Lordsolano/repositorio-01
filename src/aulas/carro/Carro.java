@@ -1,11 +1,14 @@
-public class Carro {
-    public String modelo;
-    public String marca;
-    public String cor;
-    public int ano;
-    public boolean ligado;
-    public int aceleracao;
+package aulas.carro;
 
+public class Carro {
+
+    private String modelo;
+    private String marca;
+    public String cor;
+    private int ano;
+    private boolean ligado;
+    private int aceleracao;
+    private int idade;
 
     public Carro(String modelo, String marca, String cor, int ano) {
         this.modelo = modelo;
@@ -14,6 +17,7 @@ public class Carro {
         this.ano = ano;
         this.ligado = false;
         this.aceleracao = 0;
+        this.setIdade();
 
     }
 
@@ -42,6 +46,51 @@ public class Carro {
                 break;
             default:
                 this.aceleracao += 750;
+                break;
         }
+    }
+
+    public String getModelo()
+    {
+        return modelo;
+    }
+
+    public String getMarca()
+    {
+        return marca;
+    }
+
+    public String getCor()
+    {
+        return cor;
+    }
+
+    public void setCor(String cor)
+    {
+        this.cor = cor;
+    }
+
+    public int getAno()
+    {
+        return ano;
+    }
+
+    public boolean getLigado()
+    {
+        return ligado;
+
+    }
+
+    public int getAceleracao()
+    {
+        return aceleracao;
+    }
+
+    private void setIdade(){
+        this.idade = this.ano - 2023;
+    }
+
+    public int getIdade(){
+        return idade;
     }
 }
